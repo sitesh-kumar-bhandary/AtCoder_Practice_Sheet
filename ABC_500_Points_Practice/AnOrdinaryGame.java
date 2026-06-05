@@ -1,3 +1,4 @@
+package ABC_500_Points_Practice;
 import java.io.*;
 
 public class AnOrdinaryGame {

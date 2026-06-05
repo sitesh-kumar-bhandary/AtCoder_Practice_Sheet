@@ -1,3 +1,4 @@
+package ABC_400_Points_Practice;
 import java.io.*;
 
 public class ARC_059_B_400 {
