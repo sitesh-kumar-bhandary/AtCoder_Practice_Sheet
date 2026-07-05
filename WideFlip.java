@@ -11,42 +11,23 @@ public class WideFlip {
     }
 
     private static int wideFlip(String s){
-        int start = 1;
-        int end = s.length();
-        int result = 1;
+        int n = s.length();
 
-        while(start <= end){
-            int mid = start + (end - start) / 2;
+        int maxConsecutiveZeros = 0;
+        int zeros = 0;
+        for(int i=0;i<n;i++){
+            char ch = s.charAt(i);
 
-            if(isPossibleToConvert(mid, s)){
-                result = mid;
-                start = mid + 1;
+            if(ch == '1'){
+                maxConsecutiveZeros = Math.max(maxConsecutiveZeros, zeros);
+                zeros = 0;
             }
 
             else
-                end = mid - 1;
+                zeros++;f
         }
 
-        return result;
-    }
-
-    private static boolean isPossibleToConvert(int mid, String s){
-        int n = s.length();
-
-        char[] str = s.toCharArray();
-        for(int i=0;i<n-mid;i++){
-
-            if(str[i] == '1'){
-                for(int j=i;j<mid;j++)
-                    str[j] = (str[j] == '1' ? '0' : '1');
-            }
-        }
-
-        for(int i=n-mid;i<n;i++){
-            if(str[i] == '1')
-                return false;
-        }
-
-        return true;
+        maxConsecutiveZeros = Math.max(maxConsecutiveZeros, zeros);
+        return maxConsecutiveZeros;
     }
 }

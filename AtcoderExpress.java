@@ -66,6 +66,8 @@ public class AtcoderExpress {
             else {
 
             }
+
+            return 0.0;
         }
     }
 
